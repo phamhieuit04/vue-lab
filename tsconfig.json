@@ -1,11 +1,15 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
+    "files": [],
+    "include": ["env.d.ts", "src", "./typed-router.d.ts", "src/pages/[...404].vue"],
+    "compilerOptions": {
+        "moduleResolution": "Bundler"
     },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        },
+        {
+            "path": "./tsconfig.app.json"
+        }
+    ]
 }
