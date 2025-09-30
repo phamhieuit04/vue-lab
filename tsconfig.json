@@ -1,6 +1,12 @@
 {
     "files": [],
-    "include": ["env.d.ts", "src", "./typed-router.d.ts", "src/pages/[...404].vue"],
+    "include": [
+        "env.d.ts",
+        "components.d.ts",
+        "src",
+        "./typed-router.d.ts",
+        "src/pages/[...404].vue"
+    ],
     "compilerOptions": {
         "moduleResolution": "Bundler"
     },
