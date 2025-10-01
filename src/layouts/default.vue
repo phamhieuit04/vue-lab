@@ -1,5 +1,18 @@
+<script setup lang="ts">
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+</script>
+
 <template>
-    <div class="container h-screen mx-auto flex items-center justify-center">
-        <slot />
-    </div>
+    <slot v-if="route.name == 'Auth' || route.name == '404'" />
+    <SidebarProvider v-else>
+        <AppSidebar />
+        <SidebarInset>
+            <main class=" p-5">
+                <SidebarTrigger class="cursor-pointer" />
+                <slot />
+            </main>
+        </SidebarInset>
+    </SidebarProvider>
 </template>

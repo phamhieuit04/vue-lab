@@ -19,8 +19,11 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
-    '/auth': RouteRecordInfo<'/auth', '/auth', Record<never, never>, Record<never, never>>,
+    '404': RouteRecordInfo<'404', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
+    '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
+    'Auth': RouteRecordInfo<'Auth', '/auth', Record<never, never>, Record<never, never>>,
+    '/messages/': RouteRecordInfo<'/messages/', '/messages', Record<never, never>, Record<never, never>>,
+    '/messages/[id]': RouteRecordInfo<'/messages/[id]', '/messages/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
   }
 
   /**
@@ -39,11 +42,23 @@ declare module 'vue-router/auto-routes' {
       views: never
     }
     'src/pages/[...404].vue': {
-      routes: '/[...404]'
+      routes: '404'
+      views: never
+    }
+    'src/pages/about.vue': {
+      routes: '/about'
       views: never
     }
     'src/pages/auth.vue': {
-      routes: '/auth'
+      routes: 'Auth'
+      views: never
+    }
+    'src/pages/messages/index.vue': {
+      routes: '/messages/'
+      views: never
+    }
+    'src/pages/messages/[id].vue': {
+      routes: '/messages/[id]'
       views: never
     }
   }

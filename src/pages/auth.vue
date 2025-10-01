@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+definePage({
+    name: "Auth"
+});
+
 const choose = ref('login');
 function setChoose(value: string) {
     choose.value = value;

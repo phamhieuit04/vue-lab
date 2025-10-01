@@ -8,7 +8,11 @@
         "src/pages/[...404].vue"
     ],
     "compilerOptions": {
-        "moduleResolution": "Bundler"
+        "moduleResolution": "Bundler",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "references": [
         {
