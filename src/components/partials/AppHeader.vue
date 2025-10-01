@@ -6,7 +6,7 @@ const route = useRoute();
 </script>
 
 <template>
-    <header class="sticky top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
+    <header class="sticky z-10 top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
         <div class="flex gap-2 items-center">
             <SidebarTrigger class="cursor-pointer" />
             <h1 class="font-medium">{{ route.meta.title ?? 'Messages' }}</h1>

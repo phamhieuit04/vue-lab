@@ -9,8 +9,8 @@ const route = useRoute();
     <SidebarProvider v-else>
         <AppSidebar />
         <SidebarInset>
-            <AppHeader />
-            <main class="px-5">
+            <main>
+                <AppHeader />
                 <slot />
             </main>
         </SidebarInset>
