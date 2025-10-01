@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-
-const route = useRoute('/');
+definePage({
+    'meta': {
+        title: 'Home'
+    }
+});
 </script>
 
 <template>
-    <h1>{{ route.name }}</h1>
+    <h1>Day la trang home</h1>
 </template>

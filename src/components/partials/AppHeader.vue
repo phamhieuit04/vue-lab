@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import { Search } from 'lucide-vue-next';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+</script>
+
+<template>
+    <header class="sticky top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
+        <div class="flex gap-2 items-center">
+            <SidebarTrigger class="cursor-pointer" />
+            <h1 class="font-medium">{{ route.meta.title ?? 'Messages' }}</h1>
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="relative w-full max-w-sm items-center">
+                <Input id="search" type="text" placeholder="Search..." class="pl-10" />
+                <span class="absolute start-0 inset-y-0 flex items-center justify-center pl-3">
+                    <Search class="size-4 text-muted-foreground" />
+                </span>
+            </div>
+            <Button class="cursor-pointer">Button</Button>
+        </div>
+    </header>
+</template>

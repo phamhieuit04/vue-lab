@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-
-const route = useRoute('/about');
+definePage({
+    'meta': {
+        title: 'About'
+    }
+});
 </script>
 
 <template>
-    <h1>{{ route.name }}</h1>
+    <h1>Day la trang about</h1>
 </template>
