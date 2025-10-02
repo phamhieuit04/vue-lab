@@ -1,12 +1,30 @@
 <script setup lang="ts">
+import { useHeaderStore } from '@/stores/header';
 import { Search } from 'lucide-vue-next';
+import { onMounted, ref, useTemplateRef } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+const headerStore = useHeaderStore();
+
+const header = useTemplateRef('header');
+function setHeaderSize() {
+    headerStore.setWidth(header.value.clientWidth);
+    headerStore.setHeight(header.value.clientHeight);
+}
+
+onMounted(() => {
+    setHeaderSize();
+})
+
+window.addEventListener('resize', () => {
+    setHeaderSize();
+});
 </script>
 
 <template>
-    <header class="sticky z-10 top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
+    <header ref="header"
+        class="sticky z-10 top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
         <div class="flex gap-2 items-center">
             <SidebarTrigger class="cursor-pointer" />
             <h1 class="font-medium">{{ route.meta.title ?? 'Messages' }}</h1>
