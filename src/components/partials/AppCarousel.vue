@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel';
-import { onMounted, ref } from 'vue';
 import { useHeaderStore } from '@/stores/header';
 
 const props = defineProps<{

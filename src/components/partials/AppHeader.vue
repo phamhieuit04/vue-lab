@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useHeaderStore } from '@/stores/header';
 import { Search } from 'lucide-vue-next';
-import { onMounted, ref, useTemplateRef } from 'vue';
-import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const headerStore = useHeaderStore();

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { House, Info, MessageCircleMore } from 'lucide-vue-next';
-import { useRoute } from 'vue-router';
 
 const route = useRoute();
 

@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import tailwindcss from '@tailwindcss/vite'
 import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,6 +17,13 @@ export default defineConfig({
             dirs: ['src/components', 'src/layouts'],
             deep: true,
             extensions: ['vue'],
+        }),
+        AutoImport({
+            include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
+            imports: ['vue', 'vue-router'],
+            dts: './auto-imports.d.ts',
+            vueTemplate: true,
+            viteOptimizeDeps: true,
         }),
     ],
     resolve: {

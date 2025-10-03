@@ -1,10 +1,12 @@
 {
     "files": [],
     "include": [
+        "vite/client",
         "env.d.ts",
         "components.d.ts",
         "src",
         "./typed-router.d.ts",
+        "./auto-imports.d.ts",
         "src/pages/[...404].vue"
     ],
     "compilerOptions": {
