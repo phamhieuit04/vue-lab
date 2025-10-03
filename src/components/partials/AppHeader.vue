@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useHeaderStore } from '@/stores/header';
 import { Search } from 'lucide-vue-next';
 
 const route = useRoute();

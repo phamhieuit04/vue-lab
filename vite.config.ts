@@ -20,7 +20,14 @@ export default defineConfig({
         }),
         AutoImport({
             include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
-            imports: ['vue', 'vue-router'],
+            imports: [
+                'vue',
+                'vue-router',
+                {
+                    '@/helpers/http': ['http'],
+                    '@/stores/header': ['useHeaderStore'],
+                },
+            ],
             dts: './auto-imports.d.ts',
             vueTemplate: true,
             viteOptimizeDeps: true,

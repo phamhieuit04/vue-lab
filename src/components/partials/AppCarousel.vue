@@ -9,7 +9,7 @@ const props = defineProps<{
 
 const headerStore = useHeaderStore();
 
-const height = ref(0);
+const height = ref(800);
 function setHeight() {
     height.value = window.innerHeight - headerStore.height - 50;
 }
