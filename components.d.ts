@@ -11,6 +11,7 @@ declare module 'vue' {
     AppCarousel: typeof import('./src/components/partials/AppCarousel.vue')['default']
     AppHeader: typeof import('./src/components/partials/AppHeader.vue')['default']
     AppSidebar: typeof import('./src/components/partials/AppSidebar.vue')['default']
+    AppToggleTheme: typeof import('./src/components/partials/AppToggleTheme.vue')['default']
     Button: typeof import('./src/components/ui/button/Button.vue')['default']
     Default: typeof import('./src/layouts/default.vue')['default']
     Input: typeof import('./src/components/ui/input/Input.vue')['default']

@@ -20,8 +20,7 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-    <header ref="header"
-        class="sticky z-10 top-0 flex shrink-0 items-center justify-between gap-2 border-b bg-background p-4">
+    <header ref="header" class="sticky z-10 top-0 flex shrink-0 items-center justify-between gap-2 bg-background p-4">
         <div class="flex gap-2 items-center">
             <SidebarTrigger class="cursor-pointer" />
             <h1 class="font-medium">{{ route.meta.title ?? 'Messages' }}</h1>
@@ -33,7 +32,7 @@ window.addEventListener('resize', () => {
                     <Search class="size-4 text-muted-foreground" />
                 </span>
             </div>
-            <Button class="cursor-pointer">Button</Button>
+            <AppToggleTheme />
         </div>
     </header>
 </template>
