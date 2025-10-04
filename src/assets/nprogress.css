@@ -1,6 +1,6 @@
 #nprogress .bar {
     background-color: #42b883;
-    height: 3px;
+    height: 2px;
     position: fixed;
     z-index: 9999;
     top: 0;
